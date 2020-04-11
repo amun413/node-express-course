@@ -26,7 +26,15 @@ app.get('/users/:id',function(req,res){
 	})
 })
 
-app.post('/login',function(req,res
+app.get('/info',function(req,res){
+  res.json({
+    success:true,
+    message:'Info: this is a server, you can make requests from the browser or call it from Postman'
+
+  })
+})
+
+app.post('/login',function(req,res){
   // Typically passwords are encrypted using something like bcrypt before sending to database
  	const username=req.body.username;
  	const password=req.body.password;
