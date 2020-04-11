@@ -1,6 +1,19 @@
 const express = require('express'); //The first line gives you access to the express library by searching your node_modules for "express".
 const app = express(); // The first line gives you access to the express library by searching your node_modules for "express".
 
+const mockUserData=[
+{name:'Mark'},
+{name:'Jill'}
+]
+app.get('/users', function(req,res){
+ 	res.json({
+ 	 	success: true,
+ 	 	message: 'successfully got users. Nice!',
+ 	 	users: mockUserData
+ 	})
+})
+
+
 
 
 
